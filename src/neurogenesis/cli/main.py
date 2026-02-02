@@ -2,7 +2,6 @@
  
  import json
  import subprocess
- from typing import Optional
  
  import httpx
  import typer
