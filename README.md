@@ -21,6 +21,24 @@ docker compose up -d --build
 API: http://localhost:8000/health  
 Console: http://localhost:3000
 
+## Установка на Ubuntu (сервер)
+
+Если вы не работали с Docker, используйте скрипт подготовки:
+
+```bash
+bash scripts/setup_ubuntu.sh
+```
+
+Что делает скрипт:
+- ставит нужный софт (Docker Engine + Compose plugin, curl, git, jq);
+- копирует `.env.example` в `.env`, если файла нет;
+- проверяет свободные порты (8000/3000/5432/6379/6333);
+- если Postgres установлен локально — создаёт роль и БД.
+
+Опции:
+- `--skip-docker` — пропустить установку Docker.
+- `--skip-postgres` — пропустить создание БД.
+
 ## Основные эндпоинты API
 
 - `POST /v1/events` — публиковать события (EventEnvelope)
