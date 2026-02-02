@@ -1,0 +1,37 @@
+ :root {
+   color-scheme: light dark;
+ }
+ 
+ body {
+   margin: 0;
+   font-family: system-ui, sans-serif;
+   background: #0f1115;
+   color: #e6e9ef;
+ }
+ 
+ .container {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 48px 24px;
+ }
+ 
+ .hero {
+   margin-bottom: 32px;
+ }
+ 
+ .grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 16px;
+ }
+ 
+ .card {
+   background: #1a1f29;
+   border-radius: 12px;
+   padding: 20px;
+   border: 1px solid #2a3242;
+ }
+ 
+ .card h2 {
+   margin-top: 0;
+ }
