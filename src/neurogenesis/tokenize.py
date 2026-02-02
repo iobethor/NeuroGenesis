@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import re
-from collections.abc import Iterable
 from collections import Counter
+from collections.abc import Iterable
 
 _WORD_RE = re.compile(r"[0-9A-Za-zА-Яа-яЁё]+", re.UNICODE)
 
