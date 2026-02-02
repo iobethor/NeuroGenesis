@@ -1,0 +1,24 @@
+ # Python
+ __pycache__/
+ *.py[cod]
+ *.pyd
+ *.so
+ *.egg-info/
+ .pytest_cache/
+ .ruff_cache/
+ 
+ # Virtual env
+ .venv/
+ venv/
+ 
+ # Packaging
+ dist/
+ build/
+ 
+ # OS / editor
+ .DS_Store
+ .idea/
+ .vscode/
+ 
+ # Project artifacts
+ memory.jsonl

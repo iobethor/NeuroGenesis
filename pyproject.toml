@@ -1,0 +1,43 @@
+ [build-system]
+ requires = ["setuptools>=69", "wheel"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "neurogenesis"
+ version = "0.1.0"
+ description = "NeuroGenesis: растущий разум с активной семантической памятью"
+ readme = "README.md"
+ requires-python = ">=3.11"
+ license = { text = "MIT" }
+ authors = [{ name = "NeuroGenesis contributors" }]
+ dependencies = []
+ 
+ [project.optional-dependencies]
+ dev = [
+   "pytest>=8",
+   "ruff>=0.7",
+ ]
+ 
+ [project.scripts]
+ neurogenesis = "neurogenesis.cli:main"
+ 
+ [tool.setuptools]
+ package-dir = { "" = "src" }
+ 
+ [tool.setuptools.packages.find]
+ where = ["src"]
+ 
+ [tool.pytest.ini_options]
+ testpaths = ["tests"]
+ addopts = "-q"
+ 
+ [tool.ruff]
+ target-version = "py311"
+ line-length = 100
+ 
+ [tool.ruff.lint]
+ select = ["E", "F", "I", "B", "UP"]
+ ignore = ["E501"]
+ 
+ [tool.ruff.lint.isort]
+ known-first-party = ["neurogenesis"]
