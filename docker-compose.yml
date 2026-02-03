@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  neurogenesis:
+    build: .
+    container_name: neurogenesis
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./models:/app/models
+      - ./config:/app/config
+    environment:
+      - DEBUG=True
+      - LOG_LEVEL=INFO
+    ports:
+      - "8000:8000"  # For API if needed
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
