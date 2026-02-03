@@ -1,0 +1,16 @@
+ .env
+ .venv
+ __pycache__/
+ *.pyc
+ *.pyo
+ *.pyd
+ .mypy_cache/
+ .pytest_cache/
+ .ruff_cache/
+ dist/
+ build/
+ node_modules/
+ .next/
+ coverage/
+ *.log
+ *.sqlite3
