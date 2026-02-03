@@ -26,6 +26,11 @@ bash scripts/run_local.sh
 docker compose up -d --build
 ```
 
+Скрипт `run_local.sh` дополнительно:
+- проверяет Docker/Compose и доступность сервисов;
+- ждёт Postgres, создаёт базу при необходимости;
+- применяет `scripts/db/bootstrap.sql` для создания таблиц (если файл есть).
+
 API: http://localhost:8000/health  
 Console: http://localhost:3000
 
