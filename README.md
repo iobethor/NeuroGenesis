@@ -14,6 +14,14 @@ NeuroGenesis — event-driven core с агентами, стримингом и 
 
 ## Быстрый старт (локально)
 
+Самый простой способ (создаст `.env` и поднимет контейнеры):
+
+```bash
+bash scripts/run_local.sh
+```
+
+или вручную:
+
 ```bash
 docker compose up -d --build
 ```
