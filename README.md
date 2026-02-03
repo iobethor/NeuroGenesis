@@ -31,8 +31,8 @@ docker compose up -d --build
 - ждёт Postgres, создаёт базу при необходимости;
 - применяет `scripts/db/bootstrap.sql` для создания таблиц (если файл есть).
 
-API: http://localhost:8000/health  
-Console: http://localhost:3000
+API: http://localhost:6800/health  
+Console: http://localhost:6300
 
 ## Установка на Ubuntu (сервер)
 
@@ -45,7 +45,7 @@ bash scripts/setup_ubuntu.sh
 Что делает скрипт:
 - ставит нужный софт (Docker Engine + Compose plugin, curl, git, jq);
 - копирует `.env.example` в `.env`, если файла нет;
-- проверяет свободные порты (8000/3000/5432/6379/6333);
+- проверяет свободные порты (6800/6300/6543/6379/6333);
 - если Postgres установлен локально — создаёт роль и БД.
 
 Опции:
@@ -65,7 +65,7 @@ bash scripts/setup_ubuntu.sh
 
 ```bash
 ng up
-ng smoke --base-url http://localhost:8000
+ng smoke --base-url http://localhost:6800
 ```
 
 ## Архитектура и планы

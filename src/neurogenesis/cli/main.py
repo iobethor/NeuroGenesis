@@ -42,14 +42,14 @@
  
  
  @app.command()
- def smoke(base_url: str = "http://localhost:8000") -> None:
+def smoke(base_url: str = "http://localhost:6800") -> None:
      """Run a basic health smoke test."""
      response = httpx.get(f"{base_url}/health", timeout=5)
      typer.echo(json.dumps(response.json(), indent=2))
  
  
  @app.command("export-traces")
- def export_traces(trace_id: str, base_url: str = "http://localhost:8000") -> None:
+def export_traces(trace_id: str, base_url: str = "http://localhost:6800") -> None:
      """Export trace history for a trace id."""
      response = httpx.get(f"{base_url}/v1/events/traces/{trace_id}", timeout=10)
      typer.echo(json.dumps(response.json(), indent=2))

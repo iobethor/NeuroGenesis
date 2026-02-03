@@ -205,11 +205,11 @@ else
 fi
 
 wait_for_http "Qdrant" "http://localhost:6333/collections" || true
-wait_for_http "API" "http://localhost:8000/health" || true
-wait_for_http "Console" "http://localhost:3000" || true
+wait_for_http "API" "http://localhost:6800/health" || true
+wait_for_http "Console" "http://localhost:6300" || true
 
-log "API: http://localhost:8000/health"
-log "Console: http://localhost:3000"
+log "API: http://localhost:6800/health"
+log "Console: http://localhost:6300"
 
 if [ "$WARN_COUNT" -gt 0 ]; then
   warn "Completed with ${WARN_COUNT} warning(s)."

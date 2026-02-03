@@ -126,9 +126,9 @@ check_port() {
 }
 
 log "Checking required ports..."
-check_port 8000
-check_port 3000
-check_port 5432
+check_port 6800
+check_port 6300
+check_port 6543
 check_port 6379
 check_port 6333
 
